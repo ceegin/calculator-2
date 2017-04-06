@@ -11,6 +11,9 @@ from arithmetic import *
 while True:
     user_input = raw_input("> ")
     split_number = user_input.split(" ")
+    if "q" == split_number[0]:
+        print "Quit calculator."
+        break
     num1 = int(split_number[1])
     num2 = int(split_number[2])
     if split_number[0] == "+":
