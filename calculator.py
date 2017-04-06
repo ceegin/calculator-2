@@ -1,5 +1,4 @@
 """A prefix-notation calculator.
-
 Using the arithmetic.py file from Calculator Part 1, create the
 calculator program yourself in this file.
 """
@@ -14,10 +13,17 @@ while True:
     if "q" == split_number[0]:
         print "Quit calculator."
         break
-    num1 = int(split_number[1])
-    num2 = int(split_number[2])
+
     if split_number[0] == "+":
-        print add(num1, num2)
+        nums = []
+        nums_str = split_number[1:]
+        # result = 0
+        for item in nums_str:
+            item = int(item)
+            nums.append(item)
+
+        print add(nums)
+
     elif split_number[0] == "-":
         print subtract(num1, num2)
     elif split_number[0] == "*":
